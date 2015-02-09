@@ -16,6 +16,9 @@ Set up:
 To warm up this app, use the CommandLineTool to submit directories of spam
 and ham messages.
 
+  mvn exec:java -Dexec.mainClass=org.edng.wellframe.spamfilter.tool.CommandLineTool \
+    -Dexec.args="<directory> <y|n>"
+
 The API is available on a web deployment with two interfaces:
 
   Check message:
