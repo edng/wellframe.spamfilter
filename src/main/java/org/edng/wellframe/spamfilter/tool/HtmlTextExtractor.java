@@ -35,10 +35,10 @@ public class HtmlTextExtractor {
         } catch (BoilerpipeProcessingException e) {
             text = null;
         }
-        if (text == null) {
+        if (text == null || text.isEmpty()) {
             text = Jsoup.parse(html).text();
         }
-        if (text == null) {
+        if (text == null || text.isEmpty()) {
             return html;
         }
         return text;
