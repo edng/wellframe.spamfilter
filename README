@@ -1,0 +1,34 @@
+This is a prototype written for Wellframe for a Spam Filtering API.  The
+algorithm is based on Naive Bayes Spam Filtering technique.  The
+implementation is for illustration purpose only.
+
+Prerequisites:
+  JDK 1.6
+  Maven 3.2.5
+  Tomcat 7
+
+Set up:
+
+  Please run setup.sh to install Boilerpipe library to Maven as the public
+  repo is currently missing this library.
+
+
+To warm up this app, use the CommandLineTool to submit directories of spam
+and ham messages.
+
+The API is available on a web deployment with two interfaces:
+
+  Check message:
+
+    /check-message?message=<message>
+
+    This is to check if a message is spam.  The return value is either
+    SPAM or HAM, both with a percentage of confidence in parenthesis.  For
+    example: "SPAM (55%)"
+
+  Mark message:
+
+    /mark-message?message=<message>&isSpam=<y|n>
+
+    Mark if a message is spam or ham.
+
