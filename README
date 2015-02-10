@@ -12,7 +12,10 @@ Set up:
   Please run setup.sh to install Boilerpipe library to Maven as the public
   repo is currently missing this library.
 
-
+  Run following to compile and generate a WAR file for web deployment.
+  
+    mvn install
+  
 To warm up this app, use the CommandLineTool to submit directories of spam
 and ham messages.
 
